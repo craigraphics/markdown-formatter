@@ -1,1 +1,8 @@
+/* markdown-custom.css */
+.markdown-custom h1 {
+  font-size: 40px;
+}
 
+.markdown-custom h2 {
+  font-size: 30px;
+}
