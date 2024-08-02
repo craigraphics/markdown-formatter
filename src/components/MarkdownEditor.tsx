@@ -30,7 +30,7 @@ const MarkdownEditor: React.FC<MarkdownEditorProps> = ({ onTextChange }) => {
       </div>
 
       <textarea
-        className=" flex-grow w-full p-4 min-h-[200px] bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 border border-gray-300 dark:border-gray-700 flex-1 focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+        className="flex-grow w-full p-4 min-h-[200px] bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 border border-gray-300 dark:border-gray-700 flex-1 focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
         value={textArea}
         placeholder="Enter your markdown text here"
         onChange={(e) => setTextArea(e.target.value)}

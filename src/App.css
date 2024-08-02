@@ -1,8 +1,28 @@
 /* markdown-custom.css */
 .markdown-custom h1 {
-  font-size: 40px;
+  font-size: 3rem;
 }
 
 .markdown-custom h2 {
-  font-size: 30px;
+  font-size: 2.4rem;
+}
+
+.markdown-custom h2 {
+  font-size: 2rem;
+}
+
+.markdown-custom h3 {
+  font-size: 1.8rem;
+}
+
+.markdown-custom h4 {
+  font-size: 1.6rem;
+}
+
+.markdown-custom h5 {
+  font-size: 1.3rem;
+}
+
+.markdown-custom blockquote p {
+  @apply bg-gray-100 dark:bg-gray-800 border-l-4 border-gray-300 dark:border-gray-600 pl-4 py-2 my-4;
 }
