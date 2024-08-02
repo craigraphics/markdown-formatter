@@ -1,10 +1,21 @@
 // src/hooks/useMarkdownFormatter.ts
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 
 export const useMarkdownFormatter = () => {
-  const [textArea, setTextArea] = useState<string>('');
+  const [textArea, setTextArea] = useState<string>(() => {
+    return localStorage.getItem('markdownContent') || '';
+  });
   const [selection, setSelection] = useState({ start: 0, end: 0 });
+
+  useEffect(() => {
+    const saveInterval = setInterval(() => {
+      localStorage.setItem('markdownContent', textArea);
+    }, 5000);
+
+    // Clean up the interval when the component unmounts
+    return () => clearInterval(saveInterval);
+  }, [textArea]);
 
   const handleSelect = useCallback((event: React.ChangeEvent<HTMLTextAreaElement>) => {
     const textarea = event.target;
