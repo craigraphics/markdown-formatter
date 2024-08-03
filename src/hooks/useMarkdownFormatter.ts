@@ -79,6 +79,18 @@ export const useMarkdownFormatter = () => {
   const setTextItalic = useCallback(() => applyFormatting('*', '*'), [applyFormatting]);
   const setHeading = useCallback((level: number) => applyFormatting('#'.repeat(level)), [applyFormatting]);
   const setBlockquote = useCallback(() => applyFormatting('> ', '', true), [applyFormatting]);
+  const setList = useCallback(() => {
+    applyFormatting('- ', '', true);
+  }, [applyFormatting]);
+  const setCodeBlock = useCallback(() => {
+    applyFormatting('```\n', '\n```');
+  }, [applyFormatting]);
+  const setLink = useCallback(() => {
+    applyFormatting('[', '](https://)');
+  }, [applyFormatting]);
+  const setImage = useCallback(() => {
+    applyFormatting('![alt text](', ' "Image Title")');
+  }, [applyFormatting]);
 
   return {
     textArea,
@@ -88,5 +100,9 @@ export const useMarkdownFormatter = () => {
     setTextItalic,
     setHeading,
     setBlockquote,
+    setList,
+    setCodeBlock,
+    setLink,
+    setImage,
   };
 };
