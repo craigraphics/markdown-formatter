@@ -26,3 +26,7 @@
 .markdown-custom blockquote p {
   @apply bg-gray-100 dark:bg-gray-800 border-l-4 border-gray-300 dark:border-gray-600 pl-4 py-2 my-4;
 }
+
+.markdown-custom a {
+  @apply underline;
+}
