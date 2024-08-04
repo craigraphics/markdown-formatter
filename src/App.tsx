@@ -1,5 +1,3 @@
-// src/App.tsx
-
 import { useState } from 'react';
 import Markdown from 'react-markdown';
 import { ThemeProvider } from './context/ThemeContext';
@@ -24,8 +22,9 @@ function App() {
             <ThemeToggle />
           </div>
           <p className="text-lg mb-6 text-gray-600 dark:text-gray-300 text-left">
-            This tool will let you visualize the text and give it format in real-time. Please add text to the text field
-            and the Markdown will be generated.
+            This tool allows you to format text in real-time as you type. Enter your text in the field provided, and the
+            corresponding Markdown will be generated automatically. To apply formatting, simply select the text and
+            click the desired style button.
           </p>
         </div>
 
